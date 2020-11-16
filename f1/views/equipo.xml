@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="f1.equipo_list">
+            <field name="name">equipo list</field>
+            <field name="model">f1.equipo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Nombre"/>
+                    <field name="Pais"/>
+                    <field name="Director"/>
+                    <field name="f1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="f1.action_window2">
+            <field name="name">equipo window</field>
+            <field name="res_model">f1.equipo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Equipos" id="f1.menu_2_list" parent="f1.menu_1"
+                  action="f1.action_window2"/>
+    </data>
+</odoo>

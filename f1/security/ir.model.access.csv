@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f1_f1,f1.f1,model_f1_f1,base.group_user,1,1,1,1
+access_f1_equipo,f1.equipo,model_f1_equipo,base.group_user,1,1,1,1
+access_f1_motores,f1.motores,model_f1_motores,base.group_user,1,1,1,1
+access_f1_pilotos,f1.pilotos,model_f1_pilotos,base.group_user,1,1,1,1
+access_f1_player,f1.player,model_f1_player,base.group_user,1,1,1,1

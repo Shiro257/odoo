@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="f1.player_list">
+            <field name="name">player list</field>
+            <field name="model">f1.player</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Nombre"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="f1.action_window5">
+            <field name="name">player window</field>
+            <field name="res_model">f1.player</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Players" id="f1.menu_5_list" parent="f1.menu_1"
+                  action="f1.action_window5"/>
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="f1.pilotos_list">
+            <field name="name">pilotos list</field>
+            <field name="model">f1.pilotos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Nombre"/>
+                    <field name="Edad"/>
+                    <field name="Pais"/>
+                    <field name="FechaNacimiento"/>
+                    <field name="Poles"/>
+                    <field name="Titulos"/>
+                    <field name="Victorias"/>
+                    <!--<field name="f1"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="f1.pilotos_search">
+            <field name="name">pilotos search</field>
+            <field name="model">f1.pilotos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="Nombre"/>
+                    <field name="Edad"/>
+                    <field name="Pais"/>
+                    <field name="FechaNacimiento"/>
+                    <field name="Poles"/>
+                    <field name="Titulos" filter_domain="[('Titulos','>=',self-1),('Titulos','&lt;=',self+1)]"/>
+                    <field name="Victorias"/>
+                    <!--<field name="f1"/>-->
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="f1.action_window4">
+            <field name="name">pilotos window</field>
+            <field name="res_model">f1.pilotos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Pilotos" id="f1.menu_4_list" parent="f1.menu_1"
+                  action="f1.action_window4"/>
+
+    </data>
+</odoo>
